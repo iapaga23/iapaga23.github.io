@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+:root
+{
+    --bg-black-900: #f2f2fc;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900: #302e4d;
+    --text-black-700: #504e70;
+
+    --bg-content-01: #3fd2c7;
+    --bg-aside-01: #31443B;
+    --text-font-01: #E8F3F1;
+}
+
+body 
+{
+    
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Poppins' sans-serif;
+}
+
+*
+{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+::before,::after
+{
+    box-sizing: border-box;
+}
+
+ul
+{
+    list-style: none;
+}
+
+.section
+{
+    background: var(--bg-content-01);
+    min-height: 100vh;
+    display: block;
+    padding: 0 30px;
+    opacity: 1;
+}
+.main-content
+{
+    padding-left: 270px;
+}
+
+.padd-15{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container
+{
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+}
+
+.section .container
+{
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+.section-title
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-title h2
+{
+    font-size: 40px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    position: relative;
+}
+
+.section-title h2::before
+{
+    content: '';
+    height: 4px;
+    width: 100%;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.section-title h2::after
+{
+    content: '';
+    height: 4px;
+    width: 100%;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+}
+
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+
+.btn
+{
+    
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    background: var(--skin-color);
+    color: white;
+    border-radius: 40px;
+    border: none;
+    display: inline-block;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.btn:hover
+{
+    transform: scale(1.05);
+}
+
+/*========================================= aside =============================================*/
+.aside 
+{
+    width: 270px;
+    background: var(--bg-aside-01);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-right: 1px solid var(--bg-aside-01);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.aside .logo
+{
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.aside .logo a
+{
+    color: var(--text-font-01);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: relative;
+
+    
+}
+
+.aside .logo a span
+{
+    font-family: 'Clicker Script', cursive;
+    font-family: 40px;
+}
+
+.aside .logo a::before
+{
+    content: '';
+    height: 4px;
+    width: 50%;
+    background-color: var(--skin-color-01);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.aside .logo a::after
+{
+    content: '';
+    height: 4px;
+    width: 100%;
+    background-color: var(--skin-color-01);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+}
+
+.aside .nav 
+{
+    margin-top: 50px;
+
+}
+
+.aside .nav li
+{
+    margin-bottom: 20px;
+    display: block;
+}
+
+.aside .nav li a
+{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--text-font-01);
+    position: relative;
+    padding: 5px 15px;
+    border-bottom: 1px solid var(--bg-black-50);
+    font-weight: 600;
+  
+}
+
+.aside .nav li a::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: var(--text-font-01);
+    z-index: -1;
+    transition: all 300ms ease-in-out;
+}
+
+.aside .nav li a:hover
+{
+    color: var(--skin-color-01);
+}
+.aside .nav li a:hover::before
+{
+    width: 100%;
+}
+
+.aside .nav li a.active
+{
+    color: var(--skin-color-01);
+    background: var(--text-font-01);
+}
+
+.aside .nav li a i
+{
+    margin-right: 15px;
+    color: var(--skin-color-01);
+}
+
+/*=====================================home===================================================================*/
+.home
+{
+    min-height: 100vh;
+    display: flex;
+    color: var(--text-black-900);
+}
+
+.home .home-info
+{
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+h3.hello
+{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+h3.hello span
+{
+    font-family: 'Clicker Script', cursive;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--skin-color);
+}
+
+h3.my-profession
+{
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.home-info p
+{
+    margin-bottom: 70px;
+    font-size: 20px;
+    color: var(--text-black-700);
+}
+
+.home .home-img
+{
+    flex: 0 0 40%;
+    max-width: 40%;
+    text-align: center;
+    position: relative;
+}
+
+.home .home-img img
+{
+    height: 400px;
+}
+
+/*========================================== About Page =======================================*/
+
+.about .about-content
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about .about-content .about-text
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about .about-content .about-text h2
+{
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--text-black-900);
+}
+
+.about .about-content .about-text h2 span
+{
+    color: var(--skin-color);
+}
+
+.about .about-content .about-text p
+{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+}
+
+.about .about-content .personal-info
+{
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-top: 30px;
+}
+
+.about .about-content .personal-info .info-item
+{
+    flex: 0 0 50%;
+    max-width: 500%;
+}
+
+.about .about-content .personal-info .info-item p
+{
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--text-black-900);
+    border-bottom: 1px solid var(--bg-black-50);
+}
+
+.about .about-content .personal-info .info-item p span
+{
+    font-weight: 400;
+    color: var(--text-black-700);
+    margin-left: 4px;
+    display: inline-block;
+}
+
+.about .about-content .personal-info .buttons
+{
+    
+    margin-top: 1px;
+}
+
+.about .about-content .skills
+{
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-top: 40px;
+}
+
+.about .about-content .skills .skill-item
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+
+}
+
+.about .about-content .skills .skill-item h3
+{
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+}
+
+/*==================================== Project PART =============================================*/
+
+.project .project-content
+{
+    flex-basis: 50%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+}
+
+.project .project-content img
+{
+    width: 100%;
+}
+
+.project .project-content h4
+{
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.project .project-content .btn-location
+{
+    margin: 0;
+    margin-top: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
